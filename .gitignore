@@ -1,3 +1,5 @@
 node_modules/
 image/
 *.txt
+script/
+pages/random.css

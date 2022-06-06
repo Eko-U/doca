@@ -86,9 +86,21 @@ li {
     fill: var(--color-white);
     width: 4rem;
     height: 4rem;
+	cursor: pointer;
 }
 
 .icon__cog {
     align-self: end;
 }
 
+.hidden {
+	display: none;
+}
+
+.overlay {
+	background-color: rgba(255, 255, 255, 0.61);
+	z-index: 5;
+	backdrop-filter: blur(3px);
+	width: 100%;
+	height: 100%;
+}
