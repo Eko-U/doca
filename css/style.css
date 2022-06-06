@@ -57,7 +57,6 @@ li {
     transform: translateY(-0.5rem); }
 
 .container {
-  position: relative;
   display: grid;
   grid-template-rows: 80vh repeat(2, min-content) repeat(3, min-content);
   grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
@@ -117,7 +116,7 @@ img {
   display: block; }
 
 .nav {
-  position: sticky;
+  overflow: hidden;
   display: grid;
   grid-template-columns: max-content minmax(25rem, max-content);
   grid-gap: 10rem;
@@ -176,6 +175,8 @@ img {
     padding: 1rem; }
   .latest-text {
     text-align: justify; }
+  .latest__news:not(:last-child) {
+    margin-bottom: 1rem; }
   .latest__news-1 {
     grid-column: 1 / 2;
     grid-row: 2 / 3; }
@@ -190,9 +191,6 @@ img {
     grid-row: 3 / 4; }
   .latest__news-5 {
     grid-column: 2 / 3;
-    grid-row: 3 / 4; }
-  .latest__news-6 {
-    grid-column: 3 / -1;
     grid-row: 3 / 4; }
   .latest__news-6 {
     grid-column: 3 / 4;
@@ -274,13 +272,14 @@ img {
 
 .gallery__container {
   display: grid;
+  margin-top: 5rem;
   grid-template-columns: 5rem repeat(9, [col-start] 1fr [col-end]) 5rem; }
 
 .gallery {
   grid-column: col-start 1 / col-end 9;
   display: grid;
   grid-template-columns: repeat(9, [col-start] 1fr [col-end]);
-  grid-template-rows: repeat(auto-fit, 10rem);
+  grid-template-rows: repeat(auto-fit, 12rem);
   grid-gap: 2rem; }
 
 .image__gallery-1 {
@@ -295,7 +294,22 @@ img {
   grid-column: col-start 3 / col-start 5;
   grid-row: 2 / 4; }
 
-.img-gal {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
+.image__gallery-6 {
+  grid-column: col-end 4 / col-end 6;
+  grid-row: 3 / 5; }
+
+.image__gallery-8 {
+  grid-column: col-start 7 / col-start 9;
+  grid-row: 1 / 2; }
+
+.image__gallery-11 {
+  grid-column: col-end 6 / col-end 8;
+  grid-row: 4 / 6; }
+
+.image__gallery-16 {
+  grid-column: col-start 1 / col-start 3;
+  grid-row: 4 / 6; }
+
+.image__gallery-21 {
+  grid-column: col-start 3 / col-end 5;
+  grid-row: 5 / 7; }

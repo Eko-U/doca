@@ -1,5 +1,5 @@
 .nav {
-    position: sticky;
+	overflow: hidden;
     display: grid;
     grid-template-columns: max-content minmax(25rem, max-content);
     grid-gap: 10rem;
@@ -73,6 +73,7 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 5rem;
     margin-top: 15rem;
+	
     &__heading {
         grid-column: 1 / 4;
         justify-self: stretch;
@@ -85,6 +86,10 @@
     }
     
     &__news {
+		
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
         
         &-1 {
             grid-column: 1 / 2;
@@ -108,11 +113,6 @@
         
         &-5 {
             grid-column: 2 / 3;
-            grid-row: 3 / 4;
-        }
-        
-        &-6 {
-            grid-column: 3 / -1;
             grid-row: 3 / 4;
         }
         
