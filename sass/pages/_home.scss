@@ -41,7 +41,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
-        height: 90vh;
+        height: 95vh;
         clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
         padding: 10rem;
     }
@@ -132,6 +132,10 @@
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     padding: 2rem 0;
+	
+	position: sticky;
+	top: 0;
+	height: 100vh;
 }
 
 .footer{
