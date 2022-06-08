@@ -14,3 +14,9 @@ img {
     object-fit: cover;
     display: block;
 }
+
+.icon-location,
+.icon-phone,
+.icon-envelop {
+	fill: var(--color-primary-dark);
+} 

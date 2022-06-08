@@ -33,36 +33,36 @@
     position: relative;
     &__hero {
         display: grid;
-        grid-template-rows: min-content;
-        grid-template-columns: max-content min-content;
+        grid-template-columns: max-content;
         align-content: center;
+		justify-content: center;
         background-image: linear-gradient(to right, rgba(240, 125, 8, 0.81), rgba(230, 129, 27, 0.29)),
             url(../../image/doglove.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
+		background-attachment: fixed;
         height: 95vh;
         clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
         padding: 10rem;
     }
     
     &__text {
-//        position: absolute;
-//        top: 50%;
-//        left: 20%;
-//        transform: translate(-50%, -50%);
+
         color: var(--color-white);
         display: grid;
         grid-template-rows: 1fr;
         grid-row-gap: 1rem;
+		place-items: center;
         
         &-heading {
-            font-size: 5rem;
+            font-size: 7rem;
+			font-family: 'Ubuntu', sans-serif;
         }
         
         &-btn {
             width: 15rem;
-            justify-self: start;
+//            justify-self: start;
         }
     }
 }
@@ -177,9 +177,6 @@
 }
 
 .copyright {
-    display: grid;
-    grid-template-columns: max-content;
-    place-content: center;
     text-align: center;
     margin: 0 auto;
     color: #fff;

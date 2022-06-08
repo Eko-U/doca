@@ -14,12 +14,31 @@
 			<div class="contact__body-info">
 <!--				<div class="contact__body-info-info">-->
 					<h3 class="contact__body-info-full">Contact Info</h3>
-					<h5 class="contact__body-info-left">Address:</h5>
+					
+					<div class="contact__body-info--icon">
+						<svg class="icon icon-location">
+							<use xlink:href="../image/sprite.svg#icon-location2"></use>
+						</svg>
+					</div>
 					<p class="contact__body-info-right">1600 Amhitheatre Parkway, Mountain View, CA 94043, United States</p>
-					<h5 class="contact__body-info-left">Phone:</h5>
-					<p class="contact__body-info-right">+234 (0) 9015165636</p>
-					<h5 class="contact__body-info-left">Email:</h5>
-					<p class="contact__body-info-right"><a href="mailto:ekogift1999@gmail.com">ekogift1999@gmail.com</a></p>
+					<div class="contact__body-info--icon">
+						<svg class="icon icon-phone">
+							<use xlink:href="../image/sprite.svg#icon-phone"></use>
+						</svg>
+					</div>
+					<p class="contact__body-info-right">
+						<span>+234 (0) 9015165636</span><br>
+						<span>+234 (0) 9015143556</span>
+					</p>
+					<div class="contact__body-info--icon">
+						<svg class="icon icon-envelop">
+							<use xlink:href="../image/sprite.svg#icon-envelop"></use>
+						</svg>
+					</div>
+					<p class="contact__body-info-right">
+					<a href="mailto:ekogift1999@gmail.com">ekogift1999@gmail.com</a><br>
+					<a href="mailto:ekogift1999@gmail.com">doggycat@info.com</a>
+					</p>
 <!--				</div>-->
 				<div class="contact__body-info--social">
 					
@@ -29,6 +48,8 @@
 			<div class="contact__body-us">
 				<h3>Get in Touch with Us</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit soluta, totam sunt, quaerat odit eius omnis assumenda quisquam provident, minus quod maxime esse, fugiat ipsum harum accusantium dolorum mollitia quo!</p>
+				
+
 				<div class="contact__body--input input__name">
 					<label for="name" class="contact__body--input-label">Your Name<span class="asterik"><abbr title="Required">*</abbr></span></label>
 					<input type="text" class="newsletter__input contact__body--input-input" id="name" required>
@@ -37,11 +58,14 @@
 					<label for="name" class="contact__body--input-label">Your Email<span class="asterik"><abbr title="Required">*</abbr></span></label>
 					<input type="text" class="newsletter__input contact__body--input-input" id="name" required>
 				</div>
-				<div class="contact__body--input input__message">
-					<label for="name" class="contact__body--input-label">Your Message<span class="asterik"><abbr title="Required">*</abbr></span></label>
-					<input type="text" class="newsletter__input contact__body--input-input" id="name" required>
+				<div class="contact__body--input__message">
+					<label for="message" class="contact__body--input-label">Your Message<span class="asterik"><abbr title="Required">*</abbr></span></label>
+					<textarea name="" id="message" required></textarea>
 				</div>
-<!--				<button class="btn">Send Message</button>-->
+				
+				<div class="contact__body--btn">
+					<button class="btn contact__body--btn-btn">Send Message</button>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Ubuntu:wght@300&display=swap');
 :root {
     --color-light-black: #3b3b3b;
     --color-primary-dark: #e58400;
@@ -24,19 +25,31 @@ body {
 }
 
 a {
+//	text-transform: uppercase;
     text-decoration: none;
     font-size: 1.5rem;
+	font-weight: 400;
     color: var(--color-primary-dark);
 }
 
-h1 {font-size: 3.5rem; line-height: 1;margin-bottom: .3rem;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+//	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Quicksand', sans-serif;
+}
+
+h1 {font-size: 3.5rem; line-height: 1;}
 h2 {font-size: 3rem}
 h3 {font-size: 2.5rem}
 h4{font-size: 2rem;}
 h5{font-size: 1.7rem}
 
 p {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 li {
@@ -68,7 +81,9 @@ li {
 
 .newsletter__input {
     border: none;
-    background-color: rgba(248, 244, 244, 0.24);
+    background-color: rgba(244, 242, 242, 0.48);
+	font-size: 1.5rem;
+	padding-left: 1.2rem;
     
     &:focus {
         outline: none;
@@ -84,16 +99,24 @@ li {
     }
 }
 
-.icon_nav {
-    fill: var(--color-white);
-    width: 4rem;
-    height: 4rem;
-	cursor: pointer;
+
+
+.icon {
+	width: 3rem;
+    height: 3rem;
+	
+	&_menu {
+		fill: var(--color-white);
+		cursor: pointer;
+	}
+	
+	&__cog {
+		fill: inherit;
+    	align-self: end;
+	}
 }
 
-.icon__cog {
-    align-self: end;
-}
+
 
 .hidden {
 	display: none;
@@ -107,10 +130,9 @@ li {
 	height: 100%;
 }
 
-
 //asterik required
 .asterik abbr {
 	text-decoration: none;
 	color: #ff0000;
-	margin-left: 2px;
+	margin-left: 5px;
 }
