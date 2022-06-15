@@ -1,5 +1,6 @@
 .nav {
-	overflow: hidden;
+//	overflow: hidden;
+	grid-column: 2 / -1;
     display: grid;
     grid-template-columns: max-content minmax(25rem, max-content);
     grid-gap: 10rem;
@@ -7,7 +8,7 @@
     justify-content: space-between;
     font-size: 2rem;
     padding: 1rem 5rem;
-    box-shadow: 3px 2px 3px var(--color-light-black);
+    box-shadow: 0 3px 5px rgba(203, 203, 203, 0.74);;
     background-color: rgba(253, 244, 235, 0);
     
     &__logo {
@@ -73,6 +74,7 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 5rem;
     margin-top: 15rem;
+	overflow: hidden;
 	
     &__heading {
         grid-column: 1 / 4;
@@ -180,6 +182,19 @@
     text-align: center;
     margin: 0 auto;
     color: #fff;
+	vertical-align: center;
+	
+	&__icon {
+		fill: #fff;
+		height: 2rem;
+		width: 2rem;
+		transition: all .2s;
+		
+		&:hover {
+			fill: #ff0000;
+			transform: scale(1.3);
+		}
+	}
 }
 
 .newsletter {

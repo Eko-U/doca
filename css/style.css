@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Ubuntu:wght@300&display=swap");
 :root {
-  --color-light-black: #3b3b3b;
+  --color-light-black: #191919;
   --color-primary-dark: #e58400;
   --color-white: #fff; }
 
@@ -19,7 +19,8 @@ html {
 
 body {
   line-height: 1.5;
-  font-family: 'Nunito', sans-serif; }
+  font-family: 'Nunito', sans-serif;
+  color: var(--color-light-black); }
 
 a {
   text-decoration: none;
@@ -73,7 +74,7 @@ li {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh repeat(2, min-content) repeat(3, min-content);
+  grid-template-rows: min-content 80vh repeat(2, min-content) repeat(3, min-content);
   grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .newsletter__input {
@@ -163,32 +164,40 @@ img {
   grid-auto-rows: minmax(min-content, max-content); }
 
 .about__heading {
-  background-image: linear-gradient(to bottom, rgba(240, 125, 8, 0.8), rgba(230, 129, 27, 0.8)), url(../../image/doglove.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  position: relative;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-column-gap: 2rem;
-  padding: 5rem; }
+  padding: 10rem;
+  align-self: stretch;
+  justify-self: stretch; }
   .about__heading-text {
     display: grid;
     grid-template-rows: repeat(2, max-content);
-    grid-row-gap: 2rem; }
+    grid-row-gap: 2rem;
+    align-self: center; }
   .about__heading-img {
-    position: relative; }
+    position: relative;
+    margin: 5rem 0; }
     .about__heading-img--1 {
-      position: absolute;
-      right: 0;
-      top: 50px; }
+      left: 2rem;
+      z-index: 100; }
     .about__heading-img--2 {
-      position: absolute;
-      top: 0; }
+      top: 5rem;
+      left: 25rem; }
+    .about__heading-img--3 {
+      top: 15rem;
+      left: 20%; }
     .about__heading-img img {
+      position: absolute;
       width: 300px;
-      height: 150px; }
+      height: 200px;
+      transition: all .2s; }
+      .about__heading-img img:hover {
+        z-index: 9999;
+        transform: scale(1.1); }
 
 .about__workers {
   grid-column: 3 / 10;
@@ -262,6 +271,16 @@ img {
 .icon__instagram:hover {
   fill: #405de6;
   transform: translateY(-1rem) scale(1.2); }
+
+.bg__video {
+  width: 100%;
+  height: 100%;
+  opacity: .2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1; }
 
 .contact {
   display: grid;
@@ -365,7 +384,7 @@ img {
     grid-row: 5 / 6; }
 
 .nav {
-  overflow: hidden;
+  grid-column: 2 / -1;
   display: grid;
   grid-template-columns: max-content minmax(25rem, max-content);
   grid-gap: 10rem;
@@ -373,7 +392,7 @@ img {
   justify-content: space-between;
   font-size: 2rem;
   padding: 1rem 5rem;
-  box-shadow: 3px 2px 3px var(--color-light-black);
+  box-shadow: 0 3px 5px rgba(203, 203, 203, 0.74);
   background-color: rgba(253, 244, 235, 0); }
   .nav__logo {
     color: var(--color-primary-dark); }
@@ -418,7 +437,8 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 5rem;
-  margin-top: 15rem; }
+  margin-top: 15rem;
+  overflow: hidden; }
   .latest__heading {
     grid-column: 1 / 4;
     justify-self: stretch;
@@ -489,7 +509,16 @@ img {
 .copyright {
   text-align: center;
   margin: 0 auto;
-  color: #fff; }
+  color: #fff;
+  vertical-align: center; }
+  .copyright__icon {
+    fill: #fff;
+    height: 2rem;
+    width: 2rem;
+    transition: all .2s; }
+    .copyright__icon:hover {
+      fill: #ff0000;
+      transform: scale(1.3); }
 
 .newsletter {
   grid-column: center-start / center-end;
@@ -533,11 +562,14 @@ img {
 
 .gallery__container {
   display: grid;
-  margin-top: 5rem;
   grid-template-columns: [space-start] 5rem [space-end] repeat(auto-fit, [col-start] minmax(25rem, 1fr) [col-end]) [full-start] 5rem [full-end];
-  grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr)); }
+  grid-template-rows: min-content repeat(auto-fit, minmax(10rem, 1fr)); }
+
+.nav__gallery {
+  grid-column: 1 / -1; }
 
 .gallery {
+  margin-top: 5rem;
   grid-column: col-start 1 / full-start;
   display: grid;
   grid-template-columns: repeat(9, [col-start] 1fr [col-end]);
@@ -578,3 +610,74 @@ img {
 
 .footer_gallery {
   grid-column: 1 / -1; }
+
+.store__container {
+  display: grid;
+  grid-template-columns: 7rem 1fr 7rem;
+  justify-content: center; }
+
+.store__products {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, max-content)); }
+  .store__products-heading {
+    grid-column: 1 / -1; }
+
+.store__products--animal {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-row-gap: 1.5rem;
+  padding: 1rem; }
+  .store__products--animal-img {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2; }
+  .store__products--animal-add {
+    color: var(--color-white);
+    cursor: pointer;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / -1; }
+    .store__products--animal-add__left {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      background-color: var(--color-primary-dark);
+      align-items: center;
+      padding: .7rem;
+      justify-content: center;
+      grid-column-gap: 2rem; }
+      .store__products--animal-add__left svg {
+        fill: var(--color-white); }
+    .store__products--animal-add p {
+      background-color: var(--color-primary-dark);
+      text-align: center; }
+  .store__products--animal-rating {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, max-content);
+    fill: var(--color-primary-dark);
+    align-items: center; }
+  .store__products--animal-love {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 9999;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    fill: var(--color-white);
+    justify-self: end;
+    cursor: pointer; }
+    .store__products--animal-love:hover {
+      fill: var(--color-primary-dark); }
+  .store__products--animal-detail {
+    grid-column: 1 / -1; }
+
+span {
+  font-size: 1.5rem;
+  color: #767676; }
+
+.icon-rating {
+  height: 1.5rem;
+  width: 1.5rem; }

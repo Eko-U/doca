@@ -1,10 +1,14 @@
 .gallery__container {
 	display: grid;
-	margin-top: 5rem;
 	grid-template-columns: [space-start] 5rem [space-end] repeat(auto-fit, [col-start] minmax(25rem, 1fr) [col-end]) [full-start] 5rem [full-end];
-	grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
+	grid-template-rows: min-content repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.nav__gallery {
+	grid-column: 1 / -1;
 }
 .gallery {
+	margin-top: 5rem;
 	grid-column: col-start 1 / full-start;
 	display: grid;
 	grid-template-columns: repeat(9, [col-start] 1fr [col-end]);
