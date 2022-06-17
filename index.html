@@ -8,17 +8,56 @@
 <body>
    <div class="container">
       <nav class="nav">
+              <div class="nav__logo-icon">
+              	<svg class="nav__logo-icon">
+               		<use xlink:href="image/sprite.svg#icon-menu"></use>
+           			</svg>
+              </div>
                <div class="nav__logo">
                    <h1>Cat and Dogs</h1>
                </div>
                <div class="nav__menu">
                    <ul class="nav__list">
-					   <li><a href="index.html">Home</a></li>
-					   <li><a href="pages/about.html">About</a></li>
-					   <li><a href="pages/contact.html">Contact</a></li>
-					   <li><a href="pages/signup.html">Signup</a></li>
-					   <li><a href="pages/store.html">Store</a></li>
-                       <li><a href="pages/gallery.html">Gallery</a></li>
+					   <li class="nav__list-li">
+					   		<a href="index.html">
+								<svg class="icon-menu icon--list"><use xlink:href="image/sprite.svg#icon-home"></use></svg>
+				   				<span>Home</span>
+					   		</a>
+					   </li>
+					   <li class="nav__list-li">
+					   	<a href="pages/about.html">
+					   		<svg class="icon-menu icon--list"><use xlink:href="image/sprite.svg#icon-people_alt"></use></svg>
+					   		<span>About</span>
+					   	</a>
+					   </li>
+					   
+					   <li class="nav__list-li">
+					   	<a href="pages/gallery.html">
+					   		<svg class="icon-menu icon--list"><use xlink:href="image/sprite.svg#icon-gallery"></use></svg>
+					   		<span>Gallery</span>
+					   	</a>
+					   </li>
+					   
+					    <li class="nav__list-li">
+					   	<a href="pages/store.html">
+					   		<svg class="icon-menu icon--list"><use xlink:href="image/sprite.svg#icon-location-shopping"></use></svg>
+					   		<span>Store</span>
+					   	</a>
+					   </li>
+					   
+					    <li class="nav__list-li">
+					   	<a href="pages/contact.html">
+					   		<svg class="icon-menu icon--list"><use xlink:href="image/sprite.svg#icon-phone"></use></svg>
+					   		<span>Contact</span>
+					   	</a>
+					   </li>
+					   
+					    <li class="nav__list-li">
+					   	<a href="pages/signup.html">
+					   		<svg class="icon-menu icon--list"><use xlink:href="image/sprite.svg#icon-people_alt"></use></svg>
+					   		<span>Signin/SignUp</span>
+					   	</a>
+					   </li>
                    </ul>
                </div>
            </nav>
@@ -32,6 +71,7 @@
 <!--               <div class="header__img"></div>-->
            </div>
        </header>
+<!--
        <section class="sidebar">
            <svg class="icon-menu icon">
                <use xlink:href="image/sprite.svg#icon-menu"></use>
@@ -41,84 +81,109 @@
                <use xlink:href="image/sprite.svg#icon-cog"></use>
            </svg>
        </section>
-<!--       sidebar popup-->
+       sidebar popup
        <section class="sidebar__popup hidden">
            
        </section>
+-->
        
        <section class="latest margin-b-xlg">
            <h1 class="latest__heading center">Trending News</h1>
            <div class="latest__news latest__news-1 latest__news-grid">
                <figure class="latest__news-img">
-                   <img src="image/dog/golden/gold-4.jpg" alt="Russian Cat" class="img">
+                   <img src="image/dog/alaskan/alas-2.jpg" alt="Russian Cat" class="img">
                </figure>
                <h4 class="latest__news-heading">This is happening</h4>
                <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
            </div>
+           
            <div class="latest__news latest__news-2 latest__news-grid">
                <figure class="latest__news-img">
-                   <img src="image/cat/russian/rus-3.jpg" alt="Russian Cat" class="img">
+                   <img src="image/cat/america_shorthair/short-3.jpg" alt="Russian Cat" class="img">
                </figure>
                <h4 class="latest__news-heading">This is happening</h4>
                <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
            </div>
            <div class="latest__news latest__news-3 latest__news-grid">
                <figure class="latest__news-img">
-                   <img src="image/Dog/dachshund/dach-2.jpg" alt="Russian Cat" class="img">
+                   <img src="image/dog/Australianshepherd/jac-3.jpg" alt="Russian Cat" class="img">
                </figure>
                <h4 class="latest__news-heading">This is happening</h4>
                <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
            </div>
            
-            <div class="latest__news latest__news-4 latest__news-grid">
+           <div class="latest__news latest__news-4 latest__news-grid">
                <figure class="latest__news-img">
-                   <img src="image/cat/hairy-1.jpg" alt="Russian Cat" class="img">
+                   <img src="image/cat/hairy/har-2.jpg" alt="Russian Cat" class="img">
                </figure>
                <h4 class="latest__news-heading">This is happening</h4>
                <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
            </div>
+           
            <div class="latest__news latest__news-5 latest__news-grid">
                <figure class="latest__news-img">
-                   <img src="image/Dog/bulldog/bull-2.jpg" alt="Russian Cat" class="img">
+                   <img src="image/dog/bulldog/bull-3.jpg" alt="Russian Cat" class="img">
                </figure>
                <h4 class="latest__news-heading">This is happening</h4>
                <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
            </div>
+           
            <div class="latest__news latest__news-6 latest__news-grid">
                <figure class="latest__news-img">
-                   <img src="image/cat/savannahcat/sav-3.jpg" alt="Russian Cat" class="img">
+                   <img src="image/cat/persian_cat/per-3.jpg" alt="Russian Cat" class="img">
                </figure>
                <h4 class="latest__news-heading">This is happening</h4>
                <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
            </div>
+           
+            <div class="latest__news latest__news-7 latest__news-grid">
+               <figure class="latest__news-img">
+                   <img src="image/dog/golden/gold-4.jpg" alt="Russian Cat" class="img">
+               </figure>
+               <h4 class="latest__news-heading">This is happening</h4>
+               <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
+           </div>
+           
+            <div class="latest__news latest__news-8 latest__news-grid">
+               <figure class="latest__news-img">
+                   <img src="image/cat/savannahcat/sav-4.jpg" alt="Russian Cat" class="img">
+               </figure>
+               <h4 class="latest__news-heading">This is happening</h4>
+               <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
+           </div>
+            <div class="latest__news latest__news-9 latest__news-grid">
+               <figure class="latest__news-img">
+                   <img src="image/dog/dachshund/dach-3.jpg" alt="Russian Cat" class="img">
+               </figure>
+               <h4 class="latest__news-heading">This is happening</h4>
+               <p class="latest__news-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
+           </div>
+           
        </section>
        
        <section class="newsletter margin-b-xlg">
            <div class="newsletter__details">
-              <div class="newsletter__details-text">
-                    <h1>Subscribe Now<br><span>To Our Newsletter</span></h1>
+                    <div class="newsletter__details--text">
+                    	<h1>Subscribe Now<br><span>To Our Newsletter</span></h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
+                    </div>
+						<input type="text" placeholder="Enter Your Name" class="newsletter__input newsletter__details-name" required>
+					  	<input type="email" placeholder="Enter Your Email" class="newsletter__input newsletter__details-email" required>
+					 	 <button class="btn newsletter__details-btn">Submit</button>
               </div>
-              
-              <input type="text" placeholder="Enter Your Name" class="newsletter__input newsletter__details-name" required>
-              <input type="email" placeholder="Enter Your Email" class="newsletter__input newsletter__details-email" required>
-              <button class="btn newsletter__details-btn">Submit</button>
-           </div>
-           
-<!--           <div class="newsletter__img"></div>-->
-      <div class="newsletter__image"></div>
+           <div class="newsletter__img"></div>
        </section>
        
        <footer class="footer margin-lg">
            <div class="footer__logo">
-               <img src="image/client/client-2.png" alt="">
+               <h1 style="text-align: center;">Logo</h1>
            </div>
            
            <div class="footer__list">
                <ul class="footer__list-grid">
                    <li>Home</li>
                    <li>About</li>
-                   <li>Contact</li>
+				   <li>Contact</li>
                    <li>Animal</li>
                    <li>Store</li>
                    <li>Gallery</li>
