@@ -12,6 +12,7 @@ $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
 $bp-medium: 50em; //800px;
 $bp-small: 37.5em; //600px;
+$bp-watch: 20em; // 320px
 
 
 *,
@@ -27,28 +28,26 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px = 1rem
 	
-		
-	@media only screen and (max-width: $bp-largest) { //1200px
-		font-size: 60%;
+	@media only screen and (max-width: $bp-large) {  // 1000px
+		font-size: 53.13%; // 8.5px === 1rem
 	}
 	
-	@media only screen and (max-width: $bp-large) {  // 900px
-		font-size: 56.25%; // 10px === 1rem
+	@media only screen and (max-width: $bp-medium) {  // 800px
+		font-size: 50%; // 8px === 1rem
 	}
 	
 	@media only screen and (max-width: $bp-small) { // 600px
-		font-size: 50%;  //1rem === 8px;
+		font-size: 40%;  //6.4px == 1rem;
 	}
 	
-	@media only screen and (max-width: 22.5rem) {
-		font-size: 37.5%; 
+	@media only screen and (max-width: $bp-watch) {
+		font-size: 31.25%; 
 	}
-
 }
 body {
     line-height: 1.5;
     font-family: 'Nunito', sans-serif;
-	color: var(--color-light-black);
+	color: var(--color-light-#171717);
 }
 
 a {
