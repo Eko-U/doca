@@ -10,7 +10,6 @@
 //RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
-$bp-md-large: 56.25em; //900px
 $bp-medium: 50em; //800px;
 $bp-small: 37.5em; //600px;
 
@@ -28,9 +27,23 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px = 1rem
 	
-	@media only screen and (max-width: $bp-largest) {
-		font-size: 50%;
+		
+	@media only screen and (max-width: $bp-largest) { //1200px
+		font-size: 60%;
 	}
+	
+	@media only screen and (max-width: $bp-large) {  // 900px
+		font-size: 56.25%; // 10px === 1rem
+	}
+	
+	@media only screen and (max-width: $bp-small) { // 600px
+		font-size: 50%;  //1rem === 8px;
+	}
+	
+	@media only screen and (max-width: 22.5rem) {
+		font-size: 37.5%; 
+	}
+
 }
 body {
     line-height: 1.5;
@@ -86,13 +99,9 @@ li {list-style-type: none;}
 
 .container {
 	display: grid;
-	grid-template-rows: min-content 80vh repeat(2, min-content) repeat(3, min-content);
-	grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end] 6rem;
-	
-//	@media only screen and (max-width: $bp-large) {
-//		grid-template-rows: min-content 80vh repeat(2, min-content) repeat(3, min-content);
-//	grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-//	}
+	grid-template-rows: min-content 80vh min-content max-content repeat(3, min-content);
+//	grid-template-columns: [full-start] 6rem [full-mid] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 6rem [full-end];
+	grid-template-columns: 6rem repeat(8, minmax(min-content, 1fr)) 6rem;
 }
 
 .newsletter__input {
