@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
 <body>
    <div class="container">
@@ -68,21 +70,37 @@
                     <a href="#" class="btn header__text-btn">Learn More</a>
                </div>
        </header>
-<!--
-       <section class="sidebar">
-           <svg class="icon-menu icon">
-               <use xlink:href="image/sprite.svg#icon-menu"></use>
-           </svg>
-           
-           <svg class="icon icon__cog">
-               <use xlink:href="image/sprite.svg#icon-cog"></use>
-           </svg>
+       
+       <section class="sidebar hidden">
+       	<a href="index.html" class="sidebar__grid icon__close">
+			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-cog"></use></svg>
+		</a>
+     		<a href="index.html" class="sidebar__grid">
+			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-home"></use></svg>
+			<span>Home</span>
+		</a>
+      	<a href="pages/gallery.html" class="sidebar__grid">
+			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-gallery"></use></svg>
+			<span>Gallery</span>
+		</a>
+		<a href="pages/store.html" class="sidebar__grid">
+			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-location-shopping"></use></svg>
+			<span>Store</span>
+		</a>
+		<a href="pages/contact.html" class="sidebar__grid">
+			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-phone"></use></svg>
+			<span>Contact</span>
+		</a>
+      
+      	<a href="pages/signup.html" class="sidebar__grid">
+			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-people_alt"></use></svg>
+			<span>Signin/SignUp</span>
+		</a>
        </section>
-       sidebar popup
+       
        <section class="sidebar__popup hidden">
            
        </section>
--->
        
        <section class="latest margin-t-md margin-b-xlg">
            <h1 class="latest__heading center">Trending News</h1>
@@ -161,7 +179,7 @@
        <section class="newsletter margin-b-xlg">
            <form class="newsletter__details">
                     <div class="newsletter__details--text">
-                    	<h1>Subscribe Now<br><span>To Our Newsletter</span></h1>
+                    	<h1 class="margin-b-sm">Subscribe Now<br><span>To Our Newsletter</span></h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
                     </div>
 						<input type="text" placeholder="Enter Your Name" class="newsletter__input newsletter__details-name" required>
