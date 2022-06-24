@@ -72,13 +72,14 @@
        </header>
        
        <section class="sidebar hidden">
-       	<a href="index.html" class="sidebar__grid icon__close">
-			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-cog"></use></svg>
-		</a>
      		<a href="index.html" class="sidebar__grid">
 			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-home"></use></svg>
 			<span>Home</span>
 		</a>
+     	<a href="pages/about.html" class="sidebar__grid">
+     		<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-people_alt"></use></svg>
+			<span>About</span>
+     	</a>
       	<a href="pages/gallery.html" class="sidebar__grid">
 			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="image/sprite.svg#icon-gallery"></use></svg>
 			<span>Gallery</span>
@@ -182,9 +183,15 @@
                     	<h1 class="margin-b-sm">Subscribe Now<br><span>To Our Newsletter</span></h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.</p>
                     </div>
-						<input type="text" placeholder="Enter Your Name" class="newsletter__input newsletter__details-name" required>
-					  	<input type="email" placeholder="Enter Your Email" class="newsletter__input newsletter__details-email" required>
-					 	 <button type="submit" class="btn newsletter__details-btn">Submit</button>
+					<div class="newsletter__details-name">
+						<input type="text" placeholder="Enter Your Name" class="newsletter__input">
+				  	<span class="error nameError"></span>
+					</div>
+					 <div class="newsletter__details-email">
+					 	<input type="email" placeholder="Enter Your Email" class="newsletter__input email">
+					 <span class="error emailError"></span>
+					 </div>
+					 <button type="submit" class="btn newsletter__details-btn btn-form">Submit</button>
               </form>
            <div class="newsletter__img">
 <!--           	<img src="image/news.jpg" alt="">-->

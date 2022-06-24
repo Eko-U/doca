@@ -174,15 +174,19 @@
 	grid-gap: 2rem;
 	padding-top: 2rem;
 	
+	@media only screen and (min-width: $bp-large) {
+		display: none;
+	}
+	
 	span {
 		color: #fff;
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 	
 	&__icon {
 		fill: #fff;
-		width: 2.5rem;
-		height: 2.5rem;
+		width: 2rem;
+		height: 2rem;
 	}
 	
 	&__grid {
@@ -273,9 +277,9 @@
         justify-self: end;
         display: grid;
         grid-gap: 2rem;
-        grid-template-rows: max-content repeat(2, 5rem);
+        grid-template-rows: max-content;
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 5rem;
+        grid-auto-rows: max-content;
 		
 		@media only screen and (max-width: $bp-small) {
 			grid-template-rows: max-content repeat(2, 7rem) min-content;
@@ -284,15 +288,16 @@
         &-name {
             grid-column: 1 / 5;
             grid-row: 2 / 3;
-//			
-//			@media only screen and (max-width: $bp-small) {
-//				grid-column: 1 / 4;
-//			}
+			display: grid;
+			grid-template-rows: 6rem min-content;
         }
         
         &-email {
             grid-column: 1 / 5;
             grid-row: 3 / 4;
+			display: grid;
+			grid-template-rows: max-content min-content;
+			grid-template-rows: 5rem min-content;
         }
         
         &-btn {
@@ -393,13 +398,13 @@
 	box-shadow: 0 4px solid #fff;
 }
 
-.icon__close {
-	grid-column: 1 / -1;
-	justify-self: end;
-	margin-top: -1.5rem;
-	margin-right: -40px;
-}
 
 .hidden {
 	display: none;
+}
+
+.error {
+	margin-left: 1rem;
+	padding-top: .7rem;
+	color: #ff0000;
 }

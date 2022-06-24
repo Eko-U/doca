@@ -9,12 +9,16 @@
 </head>
 <body class="gallery__container">
 	<nav class="nav">
-               <div class="nav__logo">
+               <div class="nav__logo-icon">
                   	<svg class="icon-menu nav__logo-icon">
                		<use xlink:href="../image/sprite.svg#icon-menu"></use>
            			</svg>
-                   <h1>Cat and Dogs</h1>
                </div>
+               
+                <div class="nav__logo">
+               	 <h1>Cat and Dogs</h1>
+               </div>
+               
                <div class="nav__menu">
                    <ul class="nav__list">
 					   <li class="nav__list-li">
@@ -60,6 +64,36 @@
                    </ul>
                </div>
            </nav>
+           
+          <section class="sidebar hidden">
+     		<a href="../index.html" class="sidebar__grid">
+			<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="../image/sprite.svg#icon-home"></use></svg>
+			<span>Home</span>
+			</a>
+
+			<a href="about.html" class="sidebar__grid">
+				<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="../image/sprite.svg#icon-people_alt"></use></svg>
+				<span>About</span>
+			</a>
+
+			<a href="gallery.html" class="sidebar__grid">
+				<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="../image/sprite.svg#icon-gallery"></use></svg>
+				<span>Gallery</span>
+			</a>
+			<a href="store.html" class="sidebar__grid">
+				<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="../image/sprite.svg#icon-location-shopping"></use></svg>
+				<span>Store</span>
+			</a>
+			<a href="pages/contact.html" class="sidebar__grid">
+				<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="../image/sprite.svg#icon-phone"></use></svg>
+				<span>Contact</span>
+			</a>
+
+			<a href="signup.html" class="sidebar__grid">
+				<svg class="icon-menu icon--list sidebar__icon"><use xlink:href="../image/sprite.svg#icon-people_alt"></use></svg>
+				<span>Signin/SignUp</span>
+			</a>
+       </section>
 	<div class="gallery">
 <!--	Russian Blue-->
 		<figure class="image-gallery image__gallery-1">
@@ -329,5 +363,6 @@
            </div>
            <p class="copyright">&copy; Copyright 2022 by Eko Gift. Feel free to use this <br>project for your own purposes. This does not apply if you plan to <br>produce your own course or tutorials based on this project. </p>
        </footer>
+         <script src="../script/script.js"></script>
 </body>
 </html>
