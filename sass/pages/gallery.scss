@@ -1,7 +1,7 @@
 .gallery__container {
 	display: grid;
 	grid-template-columns: [space-start] 5rem [space-end] repeat(auto-fit, [col-start] minmax(25rem, 1fr) [col-end]) [full-start] 5rem [full-end];
-	grid-template-rows: min-content repeat(auto-fit, minmax(10rem, 1fr));
+	grid-template-rows: min-content repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .nav__gallery {
@@ -58,6 +58,32 @@
 	&-21 {
 		grid-column: col-start 3 / col-end 4;
 		grid-row: 5 / 7;
+	}
+	
+	&-25 {
+		grid-column: 5 / 7;
+	}
+	
+	&-33 {
+		grid-column: 3 / span 3;
+	}
+	
+	&-34 {
+		grid-column: 3 / 5;
+	}
+	
+	&-43 {
+		grid-row: 7 / 9;
+		grid-column: 1 / 3;
+	}
+	
+	&-40 {
+		grid-column: 1 / 5;
+	}
+	
+	&-73 {
+		grid-column: 6 / -1;
+		grid-row: 7 / 8;
 	}
 }
 
