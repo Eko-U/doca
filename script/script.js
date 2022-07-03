@@ -29,7 +29,8 @@ btn.addEventListener('click', (e) => {
 		nameError.style.display = 'none';
 	}
 	
-	if (email.value === '' || email.value === null) {
+	if(email.value === '' || email.value === null) {
+		e.preventDefault();
 		emailError.textContent = 'Please Enter Your email 😊';
 	}else if (email.value.length > 0) {
 		emailError.style.display = 'none';
