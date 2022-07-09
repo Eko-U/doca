@@ -312,7 +312,7 @@ img {
         grid-column: 1 / -1; } }
 
 .about__client {
-  grid-column: 2 / 12;
+  grid-column: 2 / 11;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-row-gap: 5rem;
@@ -400,6 +400,9 @@ img {
   @media only screen and (max-width: 33.12em) {
     .bg__video {
       display: none; } }
+
+.welcome {
+  font-size: 1rem; }
 
 .contact {
   display: grid;
@@ -503,6 +506,7 @@ textarea {
     .form {
       width: 80vw;
       grid-template-columns: 1fr;
+      grid-template-rows: 40vh;
       margin: 10rem auto;
       height: 100vh; } }
   .form__img {
@@ -534,7 +538,7 @@ textarea {
 .container {
   display: grid;
   grid-template-rows: min-content 90vh min-content max-content repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end] 6rem;
+  grid-template-columns: [sidebar-start] 10rem [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end] 10rem;
   position: relative; }
   @media only screen and (max-width: 50em) {
     .container {
@@ -688,7 +692,7 @@ textarea {
     align-items: center; }
 
 .latest {
-  grid-column: 2 / 10;
+  grid-column: 2 / 11;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 5rem; }
@@ -699,14 +703,15 @@ textarea {
     padding: 1rem; }
   .latest-text {
     text-align: justify; }
+  .latest__news > *:not(last-child) {
+    margin-bottom: .7rem; }
 
 .newsletter {
-  grid-column: 2 / 10;
+  grid-column: 2 / 11;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 2rem;
-  align-items: stretch;
-  grid-template-rows: min-content; }
+  grid-template-rows: 60vh; }
   @media only screen and (max-width: 50em) {
     .newsletter {
       grid-template-columns: 1fr;
@@ -738,6 +743,7 @@ textarea {
         z-index: -1; } }
   .newsletter__details {
     justify-self: end;
+    align-self: center;
     display: grid;
     grid-gap: 2rem;
     grid-template-rows: max-content;

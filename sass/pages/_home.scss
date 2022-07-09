@@ -1,7 +1,7 @@
 .container {
 	display: grid;
 	grid-template-rows: min-content 90vh min-content max-content repeat(3, min-content);
-	grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end] 6rem;
+	grid-template-columns: [sidebar-start] 10rem [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end] 10rem;
 	
 	@media only screen and (max-width: $bp-medium) {
 		grid-template-rows: min-content 55vh min-content max-content min-content;
@@ -198,7 +198,7 @@
 }
 
 .latest {
-    grid-column: 2 / 10;
+    grid-column: 2 / 11;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 //	grid-template-rows: min-content;
@@ -216,15 +216,21 @@
     &-text {
         text-align: justify;
     }
+	
+	&__news {
+		& > *:not(last-child) {
+			margin-bottom: .7rem;
+		}
+	}
 }
 
 .newsletter {
-	grid-column: 2 / 10;
+	grid-column: 2 / 11;
     display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 2rem;
-    align-items: stretch;
-    grid-template-rows: min-content;
+//    align-items: stretch;
+    grid-template-rows: 60vh;
 	
 	@media only screen and (max-width: $bp-medium) {
 		grid-template-columns: 1fr;
@@ -243,6 +249,7 @@
 	&__details {
 			display: grid;
 			grid-template-columns: 1fr;
+		
 
 			&--text{
 				grid-column: 1 / -1;
@@ -275,6 +282,7 @@
     
     &__details {
         justify-self: end;
+		align-self: center;
         display: grid;
         grid-gap: 2rem;
         grid-template-rows: max-content;
@@ -291,6 +299,7 @@
 			display: grid;
 			grid-template-rows: 6rem min-content;
         }
+		
         
         &-email {
             grid-column: 1 / 5;
